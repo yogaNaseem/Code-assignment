@@ -1,6 +1,6 @@
 package com.assignment;
 
-public class Bird extends Animal implements WalkInterface, SingInterface, FlyInterface {
+public class Bird extends Animal implements WalkInterface, SingInterface {
 
 	@Override
 	public void sing() {
@@ -14,10 +14,5 @@ public class Bird extends Animal implements WalkInterface, SingInterface, FlyInt
 		
 	}
 
-	@Override
-	public void fly() {
-		System.out.println("I am flying");
-		
-	}
 
 }
