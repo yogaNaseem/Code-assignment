@@ -29,6 +29,18 @@ public class Solution {
 		rooster.setSex(Sex.MALE);
 		System.out.println("Rooster");
 		rooster.sing();
+		
+		ParrotLivingWithDog parrotLivingWithDog = new ParrotLivingWithDog(new Bird());
+		System.out.println("parrotLivingWithDog");
+		parrotLivingWithDog.sing();
+		
+		ParrotLivingWithCat parrotLivingWithCat = new ParrotLivingWithCat(new Bird());
+		System.out.println("parrotLivingWithCat");
+		parrotLivingWithCat.sing();
+		
+		ParrotLivingWithRooster parrotLivingWithRooster = new ParrotLivingWithRooster(new Bird());
+		System.out.println("parrotLivingWithRooster");
+		parrotLivingWithRooster.sing();
 	}
 
 }
