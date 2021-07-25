@@ -1,6 +1,8 @@
 package com.assignment;
 
 import com.assignment.Animal.Sex;
+import com.assignment.Fish.Colour;
+import com.assignment.Fish.Size;
 
 public class Solution {
 
@@ -41,6 +43,19 @@ public class Solution {
 		ParrotLivingWithRooster parrotLivingWithRooster = new ParrotLivingWithRooster(new Bird());
 		System.out.println("parrotLivingWithRooster");
 		parrotLivingWithRooster.sing();
+		
+		
+		Fish fish = new Fish();
+		System.out.println("Fish");
+		fish.swim();
+		
+		ClownFish clownFish = new ClownFish(Size.SMALL, Colour.ORANGE);
+		System.out.println("clownFish");
+		clownFish.makeJokes();
+		
+		SharkFish sharkFish = new SharkFish(Size.LARGE, Colour.GREY);
+		System.out.println("sharkFish");
+		sharkFish.eat(clownFish);
 	}
 
 }
