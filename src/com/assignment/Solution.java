@@ -56,6 +56,18 @@ public class Solution {
 		SharkFish sharkFish = new SharkFish(Size.LARGE, Colour.GREY);
 		System.out.println("sharkFish");
 		sharkFish.eat(clownFish);
+		
+		ButterFly b = new ButterFly();
+		System.out.println("ButterFly");
+		b.fly();
+		
+		Catterpillar c = new Catterpillar();
+		System.out.println("Catterpillar");
+		c.walk();
+		
+		ButterFly butterFlyFromCaterpillar = new Metamorphosis().trnasform(c);
+		System.out.println("butterFlyFromCaterpillar");
+		butterFlyFromCaterpillar.fly();
 	}
 
 }
