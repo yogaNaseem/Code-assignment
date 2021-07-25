@@ -6,13 +6,15 @@ public class SharkFish extends Fish {
 		super(sz, c);
 	}
 	
+	public SharkFish() {
+		super();
+	}
+	
 	public void eat(Fish f){
 		if(f instanceof ClownFish)
 			System.out.println("Shark fish can eat clown fish");
 		else
 			System.out.println("Shark fish can eat other fish");
 		
-		System.out.println("Fish size is "+getSize());
-		System.out.println("Fish colour is "+getColour());
 	}
 }

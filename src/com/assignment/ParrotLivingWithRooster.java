@@ -1,6 +1,6 @@
 package com.assignment;
 
-public class ParrotLivingWithRooster extends Parrot  {
+public class ParrotLivingWithRooster extends ParrotBehaviour  {
 	public ParrotLivingWithRooster(Bird b) {
 		super(b);
 	}

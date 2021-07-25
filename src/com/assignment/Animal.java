@@ -21,5 +21,15 @@ public abstract class Animal {
 	}
 	
 	
+	public void sing() {
+		System.out.println("I am Singing");		
+		
+	}
+
+
+	public void walk() {
+		System.out.println("I am walking");
+		
+	}
 
 }

@@ -1,23 +1,11 @@
-/**
- * 
- */
 package com.assignment;
 
-/**
- * @author Yoga
- *
- */
-public class Parrot implements SingInterface{
+public class Parrot extends Bird implements FlyInterface{
 
-	protected Bird bird;
-	
-	public Parrot(Bird b){
-		this.bird=b;
-	}
-	
 	@Override
-	public void sing() {
-		this.bird.sing();
+	public void fly() {
+		System.out.println("I can fly");
+		
 	}
 
 }

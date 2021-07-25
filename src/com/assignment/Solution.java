@@ -1,11 +1,14 @@
 package com.assignment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.assignment.Animal.Sex;
 import com.assignment.Fish.Colour;
 import com.assignment.Fish.Size;
 
 public class Solution {
-
+	static List<Animal> animals;
 	public static void main(String[] args) {
 		
 		Bird bird = new Bird();
@@ -36,7 +39,7 @@ public class Solution {
 		System.out.println("parrotLivingWithDog");
 		parrotLivingWithDog.sing();
 		
-		ParrotLivingWithCat parrotLivingWithCat = new ParrotLivingWithCat(new Bird());
+		ParrotLivingWithCat parrotLivingWithCat = new ParrotLivingWithCat(new Parrot());
 		System.out.println("parrotLivingWithCat");
 		parrotLivingWithCat.sing();
 		
@@ -68,6 +71,39 @@ public class Solution {
 		ButterFly butterFlyFromCaterpillar = new Metamorphosis().trnasform(c);
 		System.out.println("butterFlyFromCaterpillar");
 		butterFlyFromCaterpillar.fly();
+		
+		animals = new ArrayList<Animal>();
+		animals.add(AnimalFactory.getAnimal("BIRD"));
+		animals.add(AnimalFactory.getAnimal("DUCK"));
+		animals.add(AnimalFactory.getAnimal("CHICKEN"));
+		animals.add(AnimalFactory.getAnimal("ROOSTER"));
+		animals.add(AnimalFactory.getAnimal("PARROT"));
+		animals.add(AnimalFactory.getAnimal("FISH"));
+		animals.add(AnimalFactory.getAnimal("SHARKFISH"));
+		animals.add(AnimalFactory.getAnimal("CLOWNFISH"));
+		animals.add(AnimalFactory.getAnimal("DOLPHIN"));
+		animals.add(AnimalFactory.getAnimal("FROG"));
+		animals.add(AnimalFactory.getAnimal("DOG"));
+		animals.add(AnimalFactory.getAnimal("BUTTERFLY"));
+		animals.add(AnimalFactory.getAnimal("CAT"));
+		
+		int fly = 0,sing = 0,swim = 0,walk = 0;
+		
+		for(Animal animal : animals ){
+			if (animal instanceof FlyInterface)
+				fly++;
+			if(animal instanceof SwimInterface)
+				swim++;
+			if(animal instanceof SingInterface)
+				sing++;
+			if(animal instanceof WalkInterface)
+				walk++;
+		}
+		
+		System.out.println("No of animals that can  fly is " + fly);
+		System.out.println("No of animals that can  sing is " + sing);
+		System.out.println("No of animals that can  swim is " + swim);
+		System.out.println("No of animals that can  walk is " + walk);
 	}
 
 }
