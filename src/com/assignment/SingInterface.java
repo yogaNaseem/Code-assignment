@@ -7,10 +7,6 @@ package com.assignment;
  * @author Yoga
  *
  */
-
-public abstract class Animal {
-	
-	
-	
-
+public interface SingInterface {
+	public void sing();
 }

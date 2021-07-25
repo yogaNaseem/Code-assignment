@@ -1,17 +1,23 @@
 package com.assignment;
 
-public class Bird extends Animal {
+public class Bird extends Animal implements WalkInterface, SingInterface, FlyInterface {
 
-	public void fly() {
-		System.out.println("I am flying");		
+	@Override
+	public void sing() {
+		System.out.println("I am Singing");		
 		
 	}
 
-	// added method for A.1 
-	public void sing() {
+	@Override
+	public void walk() {
+		System.out.println("I am walking");
+		
+	}
+
+	@Override
+	public void fly() {
 		System.out.println("I am flying");
 		
 	}
 
-	
 }
